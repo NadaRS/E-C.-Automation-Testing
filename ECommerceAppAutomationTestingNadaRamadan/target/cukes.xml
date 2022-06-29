@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="181.1">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="17.379">
+        <system-out>
+            <![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+When user enter first name "automation" and last name "tester"..............passed
+When user enter date of birth...............................................passed
+When user enter email "test@example.com" field..............................passed
+When user fills Password fields "P@ssw0rd" "P@ssw0rd".......................passed
+Then user clicks on register button.........................................passed
+And success message is displayed............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="13.339">
+        <system-out>
+            <![CDATA[Given user go to login page.................................................passed
+When user login with "test@example.com" and "P@ssw0rd"......................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could not login with invalid email and password" time="12.714">
+        <system-out>
+            <![CDATA[Given user go to login page.................................................passed
+When user login with "test@example.com" and "P@ssw0rd9".....................passed
+Then user press on login button.............................................passed
+And user could not login to the system......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F03_currencies | user could change currencies" name="user could change currencies" time="7.395">
+        <system-out>
+            <![CDATA[Given user go to home page..................................................passed
+When user changes currency..................................................passed
+Then check changes..........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F04_search | user could search for products" name="user can search for products" time="10.265">
+        <system-out>
+            <![CDATA[Given user goes to home page................................................passed
+When user enters product name "book" in search field........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F04_search | user could search for products" name="user can search for products 2" time="9.432">
+        <system-out>
+            <![CDATA[Given user goes to home page................................................passed
+When user enters product name "laptop" in search field......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F04_search | user could search for products" name="user can search for products 3" time="9.834">
+        <system-out>
+            <![CDATA[Given user goes to home page................................................passed
+When user enters product name "nike" in search field........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F04_search | user could search for products" name="user can search for products by sku" time="5.669">
+        <system-out>
+            <![CDATA[Given user goes to home page................................................passed
+When user enters product sku "SCI_FAITH" in search field....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F04_search | user could search for products" name="user can search for products by sku 2" time="5.971">
+        <system-out>
+            <![CDATA[Given user goes to home page................................................passed
+When user enters product sku "APPLE_CAM" in search field....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F04_search | user could search for products" name="user can search for products by sku 3" time="6.922">
+        <system-out>
+            <![CDATA[Given user goes to home page................................................passed
+When user enters product sku "SF_PRO_11" in search field....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F05_search | user could use from main categories" name="user could use from main categories" time="9.238">
+        <system-out>
+            <![CDATA[Given user navigates to home page...........................................passed
+When user choose a category.................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F06_slider | user could click on sliders" name="user could click on first slider Nokia Lumia 1020" time="6.248">
+        <system-out>
+            <![CDATA[Given user is navigated to home page........................................passed
+When user click on Nokia slider.............................................passed
+Then Confirm Nokia false reaction...........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F06_slider | user could click on sliders" name="user could click on second slider iPhone" time="4.877">
+        <system-out>
+            <![CDATA[Given user is navigated to home page........................................passed
+When user click on iPhone slider............................................passed
+Then Confirm iPhone false reaction..........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F07_FollowUs | user could choose from FollowUs" name="user could choose facebook follow" time="10.238">
+        <system-out>
+            <![CDATA[Given user will be navigated to home page...................................passed
+When user click on facebook.................................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F07_FollowUs | user could choose from FollowUs" name="user could choose twitter follow" time="10.78">
+        <system-out>
+            <![CDATA[Given user will be navigated to home page...................................passed
+When user click on twitter..................................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F07_FollowUs | user could choose from FollowUs" name="user could choose rss follow" time="7.925">
+        <failure message="Index 1 out of bounds for length 1" type="java.lang.IndexOutOfBoundsException">
+            <![CDATA[Given user will be navigated to home page...................................passed
+When user click on rss......................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+	at java.base/java.util.Objects.checkIndex(Objects.java:372)
+	at java.base/java.util.ArrayList.get(ArrayList.java:459)
+	at org.example.Pages.P03_homePage.checkIsOpenedInNewTab(P03_homePage.java:145)
+	at org.example.StepsDefinitions.D07_followUsStepDef.isOpenedInNewTab(D07_followUsStepDef.java:23)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(classpath:features/F07_followUs.feature:16)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="F07_FollowUs | user could choose from FollowUs" name="user could choose youTube follow" time="12.333">
+        <system-out>
+            <![CDATA[Given user will be navigated to home page...................................passed
+When user click on youTube..................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F08_Wishlist | user could use Wishlist" name="user could use Wishlist and select HTC One M8 Android L 5.0 Lollipop" time="9.127">
+        <system-out>
+            <![CDATA[Given user would be navigated to home page..................................passed
+When user add product to Wishlist...........................................passed
+Then Wishlist notification success is visible...............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F08_Wishlist | user could use Wishlist" name="user could opens Wishlist after selecting HTC One M8 Android L 5.0 Lollipop" time="11.055">
+        <system-out>
+            <![CDATA[Given user would be navigated to home page..................................passed
+When user add product to Wishlist...........................................passed
+Then user click on Wishlist tab on top of the page..........................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
